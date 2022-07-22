@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "express-api": "apps/express-api",
+    "fastify-api": "apps/fastify-api"
+  }
+}
