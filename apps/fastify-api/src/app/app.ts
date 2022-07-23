@@ -1,6 +1,7 @@
 import Fastify, { FastifyInstance, RouteShorthandOptions } from 'fastify';
 
-import { Routes } from './routes'
+import { DBConnection } from './plugins';
+import { Routes } from './routes';
 
 const server: FastifyInstance = Fastify({
   logger: true
@@ -21,7 +22,8 @@ const server: FastifyInstance = Fastify({
 //  }
 //}
 
-server.register(Routes)
+server.register(DBConnection);
+server.register(Routes);
 
 export const buildApp = async () => {
   try {
